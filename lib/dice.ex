@@ -1,0 +1,2 @@
+defmodule Dice do
+end
