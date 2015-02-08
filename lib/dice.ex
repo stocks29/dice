@@ -1,2 +1,18 @@
 defmodule Dice do
+
+  def roll(dice) do
+    for die <- dice do 
+      Dice.Die.roll(die)
+    end
+    |> Enum.sum
+  end
+
+  def trials(dice, num_trials) do
+    for _trial <- 1..num_trials do
+      roll(dice)
+    end
+    |> Enum.reduce(%{}, fn result, acc ->
+      Map.put(acc, result, Map.get(acc, result, 0) + 1)
+    end)
+  end
 end
