@@ -3,6 +3,12 @@ Dice
 
 Test the results of rolling different sided dice.
 
+### Add as Dependency
+
+```elixir
+{:dice, "~> 0.0.1"}
+```
+
 ### Build CLI App
 
 ```bash
