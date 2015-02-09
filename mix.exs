@@ -4,10 +4,23 @@ defmodule Dice.Mixfile do
   def project do
     [app: :dice,
      version: "0.0.1",
+     description: description,
+     package: package,
      elixir: "~> 1.0",
      deps: deps,
-     escript: escript
-   ]
+     escript: escript]
+  end
+
+  def description do
+    """
+    Library and CLI app for rolling dice
+    """
+  end
+
+  def package do
+    [contributors: ["Bob Stockdale"],
+     licenses: ["MIT License"],
+     links: %{"GitHub" => "https://github.com/stocks29/dice"}]
   end
 
   def escript do
