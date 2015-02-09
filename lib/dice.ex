@@ -1,5 +1,11 @@
 defmodule Dice do
 
+  def new(dice_sides) do
+    for side_count <- dice_sides do
+      Dice.Die.new(side_count)
+    end
+  end
+
   def roll(dice) do
     for die <- dice do 
       Dice.Die.roll(die)

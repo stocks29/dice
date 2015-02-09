@@ -5,7 +5,13 @@ defmodule Dice.Mixfile do
     [app: :dice,
      version: "0.0.1",
      elixir: "~> 1.0",
-     deps: deps]
+     deps: deps,
+     escript: escript
+   ]
+  end
+
+  def escript do
+    [main_module: Dice.Cli]
   end
 
   # Configuration for the OTP application

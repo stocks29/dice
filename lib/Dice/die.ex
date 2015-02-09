@@ -8,6 +8,8 @@ defmodule Dice.Die do
 
   defp _side_at(die, index), do: Enum.at(die, index - 1)
 
-  defp _random_side_index(die), do: die |> num_sides |> :random.uniform
+  defp _random_side_index(die), do: die |> num_sides |> _random
+
+  defp _random(n), do: :crypto.rand_uniform(0, n+1)
 
 end
