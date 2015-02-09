@@ -1,5 +1,6 @@
 defmodule Dice.Die do
 
+  def new(0), do: {:error, :zero_sides}
   def new(sides), do: Enum.to_list(1..sides)
 
   def num_sides(die), do: length die
